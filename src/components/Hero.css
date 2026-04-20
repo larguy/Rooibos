@@ -1,0 +1,125 @@
+.hero {
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Prevents layers from bleeding out */
+}
+
+.hero-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+    z-index: 0;
+}
+
+.hero-bg-layer.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    /* Darker overlay to make white text pop */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: auto;
+}
+
+.hero-logo {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    /* Reasonable max width based on previous "smaller" request */
+    max-height: 200px;
+    /* Keep it contained */
+    object-fit: contain;
+    display: block;
+}
+
+.hero-brand {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-white);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    margin-bottom: 2.5rem;
+    font-family: var(--font-body);
+    font-weight: 400;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-btn {
+    font-size: 1.1rem;
+    padding: 12px 36px;
+    background-color: #B55A38; /* Rust/Brown color from mockup */
+    color: var(--color-white);
+    border-radius: 50px; /* Pill shape */
+    text-transform: none; /* Override default btn uppercase */
+    letter-spacing: normal;
+    font-weight: 500;
+    font-family: var(--font-body);
+}
+
+.hero-btn:hover {
+    background-color: #9c4a2c;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}

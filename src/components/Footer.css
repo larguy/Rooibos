@@ -1,0 +1,78 @@
+.footer {
+    background-color: var(--color-primary);
+    /* Or darker variant? Standard footer often dark. Prompt says: Rooibos Brown is visual anchor. Let's use it or Text Grey. "Gris Tierra Oscuro" for Footer might be good. */
+    background-color: #3E3A36;
+    /* Gris Tierra from guidelines */
+    color: var(--color-bg);
+    padding-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 40px;
+}
+
+.footer-brand h3 {
+    color: var(--color-bg);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-brand p {
+    color: rgba(245, 239, 230, 0.7);
+    max-width: 300px;
+}
+
+.footer-contact h4,
+.footer-social h4 {
+    color: var(--color-accent);
+    /* Ocre Suave for highlights */
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: rgba(245, 239, 230, 0.8);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: var(--color-bg);
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(245, 239, 230, 0.5);
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+}

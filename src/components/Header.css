@@ -1,0 +1,126 @@
+.header {
+    background-color: var(--color-white);
+    padding: 0.5rem 0;
+    /* Reduced padding slightly as logo might be tall */
+    border-bottom: 1px solid rgba(122, 79, 43, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow for better visibility when scrolling */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+.header-info {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    color: var(--color-secondary);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    padding: 0;
+    z-index: 1001;
+}
+
+/* Mobile Menu Container */
+.mobile-menu {
+    display: none;
+    /* Hidden by default on desktop if you want, or handle differently */
+}
+
+@media (max-width: 768px) {
+    .header-info {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Resize logo for mobile */
+    .logo-img {
+        height: 40px;
+    }
+
+    .logo-container {
+        gap: 8px;
+    }
+
+    /* Mobile Menu Drawer */
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .mobile-menu.open {
+        max-height: 300px;
+        /* Adjust as needed */
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--color-background);
+    }
+
+    .mobile-menu a {
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: var(--color-text);
+        font-weight: 500;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .mobile-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+        background-color: var(--color-background);
+        color: var(--color-primary);
+    }
+}
