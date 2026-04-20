@@ -4,7 +4,7 @@
 }
 
 .contact-cta-container {
-    text-align: left;
+    text-align: center;
 }
 
 .cta-title {
@@ -19,7 +19,7 @@
 .cta-text {
     font-size: 1.1rem;
     color: var(--color-text);
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem auto;
     line-height: 1.6;
     max-width: 800px;
 }
