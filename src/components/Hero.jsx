@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getWhatsAppUrl } from '../config';
 import './Hero.css';
 
 const backgroundImages = [
@@ -38,7 +39,7 @@ export default function Hero() {
                 <p className="hero-text">Te acompañamos a diseñar una experiencia a medida, con sentido y una filosofía inspirada en la naturaleza.</p>
 
                 <div className="hero-cta-wrapper">
-                    <button className="btn hero-btn">Hablemos de tu viaje</button>
+                    <a href={getWhatsAppUrl("Hola! Me gustaría información sobre diseñar un viaje a medida.")} target="_blank" rel="noopener noreferrer" className="btn hero-btn" style={{ textDecoration: 'none', display: 'inline-block', boxSizing: 'border-box' }}>Hablemos de tu viaje</a>
                 </div>
             </div>
         </section>

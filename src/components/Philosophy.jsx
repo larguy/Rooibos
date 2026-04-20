@@ -1,3 +1,4 @@
+import { getWhatsAppUrl } from '../config';
 import './Philosophy.css';
 
 export default function Philosophy() {
@@ -21,7 +22,7 @@ export default function Philosophy() {
                 </div>
 
                 <div className="philosophy-cta">
-                    <button className="philosophy-btn">Hablemos de tu próximo viaje</button>
+                    <a href={getWhatsAppUrl("Hola! Me gustaría hablar sobre mi próximo viaje.")} target="_blank" rel="noopener noreferrer" className="philosophy-btn" style={{ textDecoration: 'none', display: 'inline-block', boxSizing: 'border-box' }}>Hablemos de tu próximo viaje</a>
                 </div>
             </div>
         </section>

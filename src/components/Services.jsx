@@ -1,3 +1,4 @@
+import { getWhatsAppUrl } from '../config';
 import './Services.css';
 
 const services = [
@@ -40,7 +41,7 @@ export default function Services() {
                             <div className="service-card-content">
                                 <h3 className="service-card-title">{service.title}</h3>
                                 <p className="service-card-desc">{service.description}</p>
-                                <button className="service-btn">Explorar</button>
+                                <a href={getWhatsAppUrl(`Hola! Me interesa explorar los servicios de ${service.title}.`)} target="_blank" rel="noopener noreferrer" className="service-btn" style={{ textDecoration: 'none', display: 'inline-block', boxSizing: 'border-box', textAlign: 'center' }}>Explorar</a>
                             </div>
                         </div>
                     ))}

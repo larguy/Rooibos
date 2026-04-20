@@ -1,14 +1,11 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { getWhatsAppUrl } from '../config';
 
 const WhatsAppButton = () => {
-    const phoneNumber = '5491140287624';
-    const message = 'Hola! Me gustaría más información.'; // Optional default message
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
     return (
         <a
-            href={whatsappUrl}
+            href={getWhatsAppUrl()}
             className="whatsapp-btn"
             target="_blank"
             rel="noopener noreferrer"
