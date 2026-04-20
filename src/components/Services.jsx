@@ -4,22 +4,22 @@ const services = [
     {
         title: "Viajes a Medida",
         description: "Diseñamos experiencias únicas para personas que buscan viajes bien pensados, con criterio y acompañados de principio a fin.",
-        image: "/servicio-medida.jpg"
+        image: import.meta.env.BASE_URL + "servicio-medida.jpg"
     },
     {
         title: "Viajes Corporativos",
         description: "Soluciones exclusivas para empresas y eventos especiales, ocupándonos de cada detalle para transformar una idea en una experiencia memorable.",
-        image: "/servicio-corporativo.jpg"
+        image: import.meta.env.BASE_URL + "servicio-corporativo.jpg"
     },
     {
         title: "Salidas Grupales",
         description: "Circuitos internacionales y viajes grupales diseñados con cercanía y conocimiento, conectando con la cultura y naturaleza auténtica.",
-        image: "/servicio-grupal.jpg"
+        image: import.meta.env.BASE_URL + "servicio-grupal.jpg"
     },
     {
         title: "Eventos y Deportes",
         description: "Armamos cada detalle para que puedas vivir tu evento cultural favorito o ese partido soñado, con un viaje pensado a tu medida.",
-        image: "/servicio-eventos.jpg"
+        image: import.meta.env.BASE_URL + "servicio-eventos.jpg"
     }
 ];
 
