@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import './Hero.css';
 
 const backgroundImages = [
-    '/portada.jpg',
-    '/portada-2.jpg',
-    '/portada-3.jpg',
-    '/portada-4.jpg'
+    import.meta.env.BASE_URL + 'portada.jpg',
+    import.meta.env.BASE_URL + 'portada-2.jpg',
+    import.meta.env.BASE_URL + 'portada-3.jpg',
+    import.meta.env.BASE_URL + 'portada-4.jpg'
 ];
 
 export default function Hero() {
@@ -32,7 +32,7 @@ export default function Hero() {
             <div className="hero-overlay"></div>
             <div className="container hero-content">
                 <div className="hero-logo-container" style={{ display: 'none' }}>
-                    <img src="/brand_logo.png" alt="Rooibos Travel Logo" className="hero-logo" />
+                    <img src={`${import.meta.env.BASE_URL}brand_logo.png`} alt="Rooibos Travel Logo" className="hero-logo" />
                 </div>
                 <h1 className="hero-title">Viajes que se viven, se sienten y transforman</h1>
                 <p className="hero-text">Te acompañamos a diseñar una experiencia a medida, con sentido y una filosofía inspirada en la naturaleza.</p>

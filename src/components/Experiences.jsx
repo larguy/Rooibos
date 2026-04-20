@@ -7,12 +7,12 @@ const verticalesModules = import.meta.glob('/public/verticales/*.{jpg,jpeg,png,w
 
 // Procesamos las rutas para que funcionen correctamente desde el directorio public en el navegador
 const horizontales = Object.keys(horizontalesModules).map(path => ({
-    src: path.replace('/public', ''), // '/public/horizontales/img.jpg' -> '/horizontales/img.jpg'
+    src: import.meta.env.BASE_URL + path.replace('/public/', ''), // '/public/horizontales/img.jpg' -> '/Rooibos/horizontales/img.jpg'
     format: 'horizontal'
 }));
 
 const verticales = Object.keys(verticalesModules).map(path => ({
-    src: path.replace('/public', ''),
+    src: import.meta.env.BASE_URL + path.replace('/public/', ''),
     format: 'vertical'
 }));
 

@@ -13,8 +13,8 @@ export default function Header() {
     <header className="header">
       <div className="container header-container">
         <div className="logo-container">
-          <img src="/logo_t.png" alt="Rooibos Travel Logo Icon" className="logo-img logo-t" />
-          <img src="/logo_nm.png" alt="Rooibos Travel Logo Text" className="logo-img logo-nm" />
+          <img src={`${import.meta.env.BASE_URL}logo_t.png`} alt="Rooibos Travel Logo Icon" className="logo-img logo-t" />
+          <img src={`${import.meta.env.BASE_URL}logo_nm.png`} alt="Rooibos Travel Logo Text" className="logo-img logo-nm" />
         </div>
 
         <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">

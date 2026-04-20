@@ -12,7 +12,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className="about-image-content">
-                    <img src="/manera-de-viajar.jpg" alt="Nuestra manera de viajar" className="about-image" />
+                    <img src={`${import.meta.env.BASE_URL}manera-de-viajar.jpg`} alt="Nuestra manera de viajar" className="about-image" />
                 </div>
             </div>
         </section>

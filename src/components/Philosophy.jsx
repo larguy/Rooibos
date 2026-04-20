@@ -16,7 +16,7 @@ export default function Philosophy() {
                     </div>
                     
                     <div className="philosophy-image-container">
-                        <img src="/filosofia-rooibos.jpg" alt="Hojas de té Rooibos" className="philosophy-image" />
+                        <img src={`${import.meta.env.BASE_URL}filosofia-rooibos.jpg`} alt="Hojas de té Rooibos" className="philosophy-image" />
                     </div>
                 </div>
 
