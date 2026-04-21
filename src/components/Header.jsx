@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, Clock, Menu, X } from 'lucide-react';
+import { Mail, Phone, Instagram, Facebook, Menu, X } from 'lucide-react';
 import './Header.css';
 
 export default function Header() {
@@ -37,9 +37,13 @@ export default function Header() {
             <Mail size={18} className="icon" />
             <span>contacto@rooibos.tur.ar</span>
           </div>
-          <div className="info-item">
-            <Clock size={18} className="icon" />
-            <span>Lun - Vie: 9am - 18pm</span>
+          <div className="info-item social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Instagram size={18} className="icon" />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Facebook size={18} className="icon" />
+            </a>
           </div>
         </div>
       </div>

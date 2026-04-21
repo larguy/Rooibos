@@ -21,8 +21,23 @@ export default function Philosophy() {
                     </div>
                 </div>
 
-                <div className="philosophy-cta">
-                    <a href={getWhatsAppUrl("Hola! Me gustaría hablar sobre mi próximo viaje.")} target="_blank" rel="noopener noreferrer" className="philosophy-btn" style={{ textDecoration: 'none', display: 'inline-block', boxSizing: 'border-box' }}>Hablemos de tu próximo viaje</a>
+                <div className="elements-grid">
+                    <div className="element-item">
+                        <img src={`${import.meta.env.BASE_URL}elementos/agua.jpg`} alt="Agua" className="element-image" />
+                        <p className="element-text">El agua que fluye y conecta caminos.</p>
+                    </div>
+                    <div className="element-item">
+                        <img src={`${import.meta.env.BASE_URL}elementos/tierra.jpg`} alt="Tierra" className="element-image" />
+                        <p className="element-text">La tierra que sostiene y aporta estabilidad cada experiencia.</p>
+                    </div>
+                    <div className="element-item">
+                        <img src={`${import.meta.env.BASE_URL}elementos/sol.jpg`} alt="Fuego" className="element-image" />
+                        <p className="element-text">El fuego, energía que impulsa el descubrimiento y la motivación por explorar.</p>
+                    </div>
+                    <div className="element-item">
+                        <img src={`${import.meta.env.BASE_URL}elementos/aire.jpg`} alt="Aire" className="element-image" />
+                        <p className="element-text">El Aire que representa libertad, movimiento y una manera de viajar sin apuro.</p>
+                    </div>
                 </div>
             </div>
         </section>

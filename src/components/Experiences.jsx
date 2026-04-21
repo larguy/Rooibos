@@ -24,11 +24,22 @@ export default function Experiences() {
 
     useEffect(() => {
         // Mezclamos todas las imágenes aleatoriamente
-        const shuffled = [...allImages].sort(() => 0.5 - Math.random());
+        const shuffledH = [...horizontales].sort(() => 0.5 - Math.random());
+        const shuffledV = [...verticales].sort(() => 0.5 - Math.random());
         
-        // Seleccionamos un máximo de 12 imágenes (para que la sección no sea interminable) 
-        // ¡Cada vez que recargas, serán 12 fotos distintas!
-        setImages(shuffled.slice(0, 12));
+        // Seleccionamos exactamente 6 de cada formato
+        const selH = shuffledH.slice(0, 6);
+        const selV = shuffledV.slice(0, 6);
+
+        // Patrón mágico para que encajen perfecto en rectángulos de 4 columnas (PC) y 2 columnas (Móvil)
+        // Secuencia: V, H, V, H, H, V, H, V, V, V, H, H
+        const pattern = [
+            selV[0], selH[0], selV[1], selH[1],
+            selH[2], selV[2], selH[3], selV[3],
+            selV[4], selV[5], selH[4], selH[5]
+        ];
+        
+        setImages(pattern);
     }, []);
 
     return (
@@ -37,8 +48,8 @@ export default function Experiences() {
                 <h2 className="experiences-title">Experiencias que nos transforman</h2>
                 <div className="experiences-grid">
                     {images.map((item, index) => (
-                        <div key={index} className={`experience-img-wrapper ${item.format}`}>
-                            <img src={item.src} alt={`Destino exótico ${index + 1}`} className="experience-img" />
+                        <div key={index} className={`experience-img-wrapper ${item?.format || ''}`}>
+                            <img src={item?.src} alt={`Destino exótico ${index + 1}`} className="experience-img" />
                         </div>
                     ))}
                 </div>

@@ -43,33 +43,42 @@
 
 .philosophy-image {
     width: 100%;
-    max-width: 320px;
+    max-width: 250px;
     aspect-ratio: 1;
     border-radius: 50%; /* Circle shape */
     object-fit: cover;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.philosophy-cta {
+.elements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.element-item {
     text-align: center;
-    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.philosophy-btn {
-    font-size: 1.1rem;
-    padding: 14px 40px;
-    background-color: #B55A38; /* Rust/Brown color */
-    color: var(--color-white);
-    border-radius: 50px; /* Pill shape */
-    border: none;
+.element-image {
+    width: 100%;
+    max-width: 160px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.element-text {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.6;
     font-family: var(--font-body);
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.philosophy-btn:hover {
-    background-color: #9c4a2c;
 }
 
 /* Responsive adjustments */
@@ -90,5 +99,15 @@
     .philosophy-title {
         font-size: 2.5rem;
         margin-bottom: 2rem;
+    }
+
+    .elements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .elements-grid {
+        grid-template-columns: 1fr;
     }
 }
